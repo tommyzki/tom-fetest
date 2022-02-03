@@ -1,0 +1,31 @@
+<div class="center" *ngIf="userData">
+    <div class="row mb-4">
+        <div class="col-2">
+            <a (click)="back()" style="cursor: pointer;"><h1><i class="bi bi-arrow-left"></i></h1></a>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            Username 
+        </div>
+        <div class="col-6">
+           : {{userData.username}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            Email 
+        </div>
+        <div class="col-6">
+           : {{userData.email}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-10"></div>
+        <div class="col-2">
+            <button class="btn mt-3" (click)="submitLogout()">logout</button>
+        </div>
+    </div>
+</div>

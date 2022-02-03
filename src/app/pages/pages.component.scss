@@ -1,0 +1,43 @@
+.header {
+    overflow: hidden;
+    padding: 10px 50px;
+  }
+  
+  .header a.logo {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    line-height: 25px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header-right {
+    float: right;
+    font-size: 25px;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px; 
+    line-height: 25px;
+  }
+
+  .center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .pointer{
+    color: #03A9F4 !important; 
+    cursor: pointer;
+  }
+
+  .text-elip{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

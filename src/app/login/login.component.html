@@ -1,0 +1,26 @@
+<div *ngIf="!show" class="header">
+    <a class="logo">Cinta Coding</a>
+    <div class="header-right">
+        <button (click)="showLogin()" class="btn">Login</button>
+    </div>
+</div>
+
+
+<div *ngIf="show" class="wrapper">
+    <div class="text-center mt-4 name">
+        Login Page
+        <small class="text-danger">
+            idpass: admin
+          </small>
+    </div>
+    
+    <form [formGroup]="fg" class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <input type="text" class="form-control" formControlName="username" placeholder="username" />
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <input type="password" class="form-control" formControlName="password" placeholder="Password" />
+        </div>
+        <button class="btn mt-3" (click)="submitLogin()">Login</button>
+    </form>
+</div>

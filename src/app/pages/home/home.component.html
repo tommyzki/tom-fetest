@@ -1,0 +1,77 @@
+<div class="center">
+  <div class="row">
+    <div class="col-4">
+      <select  class="pageBox" [(ngModel)]="pageSize" (ngModelChange)="onPageSizeChanged($event)">
+        <option *ngFor="let opt of limitOptions" [ngValue]="opt.value">{{opt.key}}</option>
+      </select>
+    </div>
+    <div class="col-6">
+      <input
+      #search
+      id="search"
+      type="text"
+      class="serachBox"
+      placeholder="Search"
+      [ngModel]="searchKey"
+    />
+    </div>
+    <div class="col-2">
+      <button class="btn btn-success employeebtn" (click)="addEmployee()">Add Employee</button>
+    </div>
+  </div>
+  <ngx-datatable class="material" [rows]="rows" [columnMode]="'flex'" [headerHeight]="50" [footerHeight]="50"
+    rowHeight="auto" [limit]="pageSize">
+    <ngx-datatable-column name="User Name" prop="username" [flexGrow]="1">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="First Name" prop="firstName" [flexGrow]="1">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Lst Name" prop="lastName" [flexGrow]="1">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Email" prop="email" [flexGrow]="1">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Birth Date" prop="birthDate" [flexGrow]="1">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Salary" prop="basicSalary" [flexGrow]="1">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Status" prop="status" [flexGrow]="1">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Group" prop="group" [flexGrow]="1">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Description" prop="description" [flexGrow]="1">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        {{ value }}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="FUNCTION" prop="username" [flexGrow]="2.5" [sortable]="false">
+      <ng-template let-value="value" ngx-datatable-cell-template>
+        <button class="btn btn-primary homebtn" (click)="detailPage(value)">Details</button>
+        <button class="btn btn-warning homebtn" (click)="edit()">Edit</button>
+        <button class="btn btn-danger homebtn"  (click)="deleteData()">Delete</button>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>

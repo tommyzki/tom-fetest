@@ -1,0 +1,94 @@
+<div class="center" *ngIf="employeeData">
+    <div class="row mb-4">
+        <div class="col-2">
+            <a (click)="back()" style="cursor: pointer;"><h1><i class="bi bi-arrow-left"></i></h1></a>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            Username 
+        </div>
+        <div class="col-6">
+           : {{employeeData.username}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            First Name 
+        </div>
+        <div class="col-6">
+           : {{employeeData.firstName}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            Last Name 
+        </div>
+        <div class="col-6">
+           : {{employeeData.lastName}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            Email 
+        </div>
+        <div class="col-6">
+           : {{employeeData.email}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            Birth Date 
+        </div>
+        <div class="col-6">
+           : {{employeeData.birthDate}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            Basic Salary 
+        </div>
+        <div class="col-6">
+           : {{employeeData.basicSalary | currency:'Rp':'symbol':'3.0'}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            Status 
+        </div>
+        <div class="col-6">
+           : {{employeeData.status}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            group 
+        </div>
+        <div class="col-6">
+           : {{employeeData.group}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-2"></div>
+        <div class="col-4">
+            Description 
+        </div>
+        <div class="col-6">
+           : {{employeeData.description}}
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-10"></div>
+        <div class="col-2">
+            <button class="btn btn-primary mt-3" (click)="back()">OK</button>
+        </div>
+    </div>
+</div>
