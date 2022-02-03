@@ -1,8 +1,5 @@
 <div class="center">
     <form [formGroup]="fg" (ngSubmit)="submitForm()" *ngIf="fg">
-
-
-
         <div class="row mt-4">
             <div class="col-2">
                 <a (click)="back()" style="cursor: pointer;">
@@ -155,6 +152,7 @@
             </div>
             <div class="col-6">
                 <ng-multiselect-dropdown
+                    formControlName="group" 
                     [placeholder]="'Group'"
                     [settings]="dropdownSettings"
                     [data]="dropdownList"
